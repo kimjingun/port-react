@@ -12,12 +12,25 @@ function Section() {
   window.addEventListener('scroll', function () {
     let move01 = document.querySelector('.bean-box');
     let move02 = document.querySelector('.bean-txt');
+    let move03 = document.querySelector('.pick .title');
+    let move04 = document.querySelector('.pick .text');
+    let move05 = document.querySelector('.pick .pick-btn');
+
     let position = window.scrollY;
     // console.log('scrollY', position);
 
     if (position > 223) {
       move01.style.animation = 'beanSlide01 2s ease-out';
       move02.style.animation = 'beanSlide02 2s ease-out';
+    }
+    if (position > 1175) {
+      move03.style.animation = 'front01 2s ease-out';
+      move04.style.animation = 'front02 2s ease-out';
+      move05.style.animation = 'view 2s ease-out';
+    } else {
+      move03.style.animation = 'back01 2s ease-out forwards';
+      move04.style.animation = 'back02 2s ease-out forwards';
+      move05.style.animation = 'view 2s ease-out forwards';
     }
   });
   window.onload = function () {
@@ -180,7 +193,7 @@ function Section() {
           </div>
         </section>
         <section className="section05">
-          <div className="pick">
+          <div className="pick animation">
             <div className="title"></div>
             <div className="text"></div>
             <div className="pick-btn">

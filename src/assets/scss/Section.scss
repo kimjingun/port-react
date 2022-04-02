@@ -560,6 +560,7 @@ body {
   }
 }
 
+// front
 @keyframes beanSlide01 {
   from {
     left: -500px;
@@ -580,7 +581,70 @@ body {
     opacity: 1;
   }
 }
+@keyframes front01 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 200px;
+    opacity: 1;
+  }
+}
+@keyframes front02 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 92px;
+    opacity: 1;
+  }
+}
+// @keyframes front03 {
+//   from {
+//     left: -500px;
+//     opacity: 0;
+//   }
+//   to {
+//     left: 328px;
+//     opacity: 1;
+//   }
+// }
 
+// back
+@keyframes back01 {
+  from {
+    left: 200px;
+    opacity: 1;
+  }
+  to {
+    left: -500px;
+    opacity: 0;
+  }
+}
+@keyframes back02 {
+  from {
+    left: 92px;
+    opacity: 1;
+  }
+  to {
+    left: -500px;
+    opacity: 0;
+  }
+}
+// @keyframes back03 {
+//   from {
+//     left: 328px;
+//     opacity: 1;
+//   }
+//   to {
+//     left: -500px;
+//     opacity: 0;
+//   }
+// }
+
+// opacity
 @keyframes view {
   from {
     opacity: 0;
