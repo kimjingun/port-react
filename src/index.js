@@ -14,7 +14,7 @@ ReactDOM.render(
       <Header />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/coffe" element={<CoffeList />} />
+        <Route path="/pages/coffe" element={<CoffeList />} />
       </Routes>
       <Footer />
     </Router>

@@ -15,13 +15,20 @@ function Section() {
     let move03 = document.querySelector('.pick .title');
     let move04 = document.querySelector('.pick .text');
     let move05 = document.querySelector('.pick .pick-btn');
+    let move06 = document.querySelector('.reserve');
+    let move07 = document.querySelector('.store-txt01');
+    let move08 = document.querySelector('.store-txt02');
+    let move09 = document.querySelector('.store-btn');
 
     let position = window.scrollY;
-    // console.log('scrollY', position);
+    console.log('scrollY', position);
 
-    if (position > 223) {
+    if (position > 5) {
       move01.style.animation = 'beanSlide01 2s ease-out';
       move02.style.animation = 'beanSlide02 2s ease-out';
+    } else {
+      move01.style.animation = 'beanSlide_back01 2s ease-out forwards';
+      move02.style.animation = 'beanSlide_back02 2s ease-out forwards';
     }
     if (position > 1175) {
       move03.style.animation = 'front01 2s ease-out';
@@ -31,6 +38,18 @@ function Section() {
       move03.style.animation = 'back01 2s ease-out forwards';
       move04.style.animation = 'back02 2s ease-out forwards';
       move05.style.animation = 'view 2s ease-out forwards';
+    }
+    if (position > 1580) {
+      move06.style.animation = 'view 2s ease-out';
+    }
+    if (position > 2140) {
+      move07.style.animation = 'front03 2s ease-out';
+      move08.style.animation = 'front04 2s ease-out';
+      move09.style.animation = 'front05 2s ease-out';
+    } else {
+      move07.style.animation = 'back03 2s ease-out forwards';
+      move08.style.animation = 'back04 2s ease-out forwards';
+      move09.style.animation = 'back05 2s ease-out forwards';
     }
   });
   window.onload = function () {

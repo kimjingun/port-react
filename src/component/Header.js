@@ -7,35 +7,39 @@ function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="header">
-      <div className="menu">
-        <Link to="/">
-          <img src={require('../assets/Images/ico/logo.png')} />
-        </Link>
-        <nav className="nav">
-          <ul>
-            <li>
-              <Link to="/coffe">COFFEE</Link>
-            </li>
-            <li>
-              <a onClick={() => navigate('/menu')}>MENU</a>
-            </li>
-            <li>
-              <Link to="/">STORE</Link>
-            </li>
-            <li style={{ width: '153px' }}>
-              <Link to="/">RESPONSIBILITY</Link>
-            </li>
-            <li style={{ width: '225px' }}>
-              <Link to="/">STARBUCKS REWARDS</Link>
-            </li>
-            <li style={{ width: '131px' }}>
-              <Link to="/">WHAT'S NEW</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <>
+      <header className="header">
+        <div className="menu">
+          <Link to="/">
+            <img src={require('../assets/Images/ico/logo.png')} />
+          </Link>
+          <nav className="nav">
+            <ul>
+              <li>
+                <Link to="/pages/coffe">COFFEE</Link>
+              </li>
+              <li>
+                {/* <Link onClick={() => navigate('/menu')}>MENU</Link> */}
+                <Link to="/">MENU</Link>
+              </li>
+              <li>
+                <Link to="/">STORE</Link>
+              </li>
+              <li style={{ width: '153px' }}>
+                <Link to="/">RESPONSIBILITY</Link>
+              </li>
+              <li style={{ width: '225px' }}>
+                <Link to="/">STARBUCKS REWARDS</Link>
+              </li>
+              <li style={{ width: '131px' }}>
+                <Link to="/">WHAT'S NEW</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div style={{ height: '120px' }}></div>
+    </>
   );
 }
 
