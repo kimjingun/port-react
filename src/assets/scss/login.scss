@@ -1,11 +1,48 @@
 .login {
-    .form {
-        h3 {
-            font-size: 20px;
-            color: #333;
+    background: url(../Images/bg/login_bg.jpg) center top no-repeat fixed #0a0807;
+    background-size: cover;
+    .container {
+        max-width: 570px;
+        margin: 0 auto;
+        padding: 70px 0 50px;
+        .tit {
+            > h3 {
+                color: #fff;
+                display: block;
+                font-size: 30px;
+                font-weight: normal;
+                margin-bottom: 30px;
+                text-align: center;
+            }
         }
-        .container {
-
+        .section {
+            background: #fff;
+            > p {
+                border-bottom: 1px solid #ddd;
+                color: #777;
+                font-size: 18px;
+                line-height: 24px;
+                padding: 30px 20px 30px;
+                text-align: center;
+            }
+            .form {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                > input {
+                    border: 1px solid #ddd;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    max-width: 530px;
+                    padding: 15px;
+                    width: 100%;
+                }
+                .chkBox {
+                    display: flex;
+                    align-items: center;
+                }
+            }
         }
     }
 }

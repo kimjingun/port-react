@@ -14,9 +14,23 @@ function Header() {
             <img src={require('../assets/Images/ico/logo.png')} />
           </Link>
           <nav className="nav">
+            <ul className="sub_nav">
+              <li>
+                <Link to="/component">Sign In</Link>
+              </li>
+              <li>
+                <Link to="/">My Starbucks</Link>
+              </li>
+              <li>
+                <Link to="/">Customer Service & Ideas</Link>
+              </li>
+              <li>
+                <Link to="/">Find a Store</Link>
+              </li>
+            </ul>
             <ul>
               <li>
-                <Link to="/pages/coffe">COFFEE</Link>
+                <Link to="/">COFFEE</Link>
               </li>
               <li>
                 {/* <Link onClick={() => navigate('/menu')}>MENU</Link> */}
