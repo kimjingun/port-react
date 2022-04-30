@@ -37,31 +37,22 @@ input[type="checkbox"] {
     background: #fff; 
     border-radius: 4px; 
     cursor: pointer; 
-    width: 30px; 
-    height: 30px; 
+    width: 26px; 
+    height: 26px; 
     outline: 0; 
     background: url(../Images/ico/mem_check_off.png) no-repeat;
-    background-size: 30px;
+    background-size: 26px;
 } 
 input[type="checkbox"]::after { 
     border: solid #fff; 
     border-width: 0 2px 2px 0; 
     content: ''; 
     display: none; 
-    // height: 40%; 
-    // left: 40%; 
-    // position: relative; 
-    // top: 20%; 
-    // transform: rotate(45deg); 
-    // width: 15%; 
-    width: 30px; 
-    height: 30px; 
+    width: 26px; 
+    height: 26px; 
     background: url(../Images/ico/mem_check_on.png) no-repeat;
-    background-size: 30px;
+    background-size: 26px;
 } 
-// input[type="checkbox"]:checked { 
-//     background: #505bf0; 
-// } 
 input[type="checkbox"]:checked::after { 
     display: block; 
 }

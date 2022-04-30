@@ -109,9 +109,9 @@ function Footer() {
           </li>
         </ul>
         <div className="btn">
-          <button>찾아오시는 길</button>
-          <button>신규입점제의</button>
-          <button>사이트 맵</button>
+          <button type="botton">찾아오시는 길</button>
+          <button type="botton">신규입점제의</button>
+          <button type="botton">사이트 맵</button>
         </div>
         <ul>
           <li>사업자등록번호 : 123-45-67890</li>

@@ -10,7 +10,7 @@ function Header() {
     <>
       <header className="header">
         <div className="menu">
-          <Link to="/">
+          <Link to="/" onClick={window.onload}>
             <img src={require('../assets/Images/ico/logo.png')} />
           </Link>
           <nav className="nav">

@@ -14,6 +14,9 @@ const globalStyles = createGlobalStyle`
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size:16px;
     }
+    button{
+        background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer;
+    } 
 `;
 
 export default globalStyles;
