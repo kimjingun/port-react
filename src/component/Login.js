@@ -19,6 +19,7 @@ function Login() {
               id="id"
               className="mb10"
               placeholder="아이디를 입력해 주세요."
+              autocomplete="off"
             ></input>
             <label for="pwd"></label>
             <input
@@ -26,6 +27,7 @@ function Login() {
               id="pwd"
               className="mb10"
               placeholder="비밀번호를 입력해 주세요."
+              autocomplete="off"
             ></input>
             <span className="chkBox">
               <input type="checkbox" id="chkBox"></input>
