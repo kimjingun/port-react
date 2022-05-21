@@ -80,6 +80,10 @@ function Section() {
       <div className="wrap">
         <div className="area"></div>
         {/* section01 start */}
+        <div className="fixed_card">
+          <div className="card01"></div>
+          <div className="card02"></div>
+        </div>
         <section className="section01">
           <div className="background">
             <div className="inner">
