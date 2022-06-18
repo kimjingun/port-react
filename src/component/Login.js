@@ -4,6 +4,20 @@ import '../assets/scss/Style.scss';
 import { Link } from 'react-router-dom';
 
 function Login() {
+  function test() {
+    var id = document.querySelector('#id');
+    var pwd = document.querySelector('#pwd');
+
+    if (id.value === 'admin' || pwd.value === 123) {
+      window.location.href = '/';
+    } else {
+      alert('로그인을 할 수 없습니다.');
+    }
+
+    // function back() {
+    //   history.go(-1);
+    // }
+  }
   return (
     <div className="login_form">
       <div className="container">
@@ -13,7 +27,7 @@ function Login() {
         <div className="section">
           <p>Welcome! 스타벅스 코리아에 오신 것을 환영합니다.</p>
           <div className="form">
-            <label for="id"></label>
+            <label htmlFor="id"></label>
             <input
               type="text"
               id="id"
@@ -21,7 +35,7 @@ function Login() {
               placeholder="아이디를 입력해 주세요."
               autocomplete="off"
             ></input>
-            <label for="pwd"></label>
+            <label htmlFor="pwd"></label>
             <input
               type="text"
               id="pwd"
@@ -31,9 +45,11 @@ function Login() {
             ></input>
             <span className="chkBox">
               <input type="checkbox" id="chkBox"></input>
-              <label for="chkBox">아이디저장</label>
+              <label htmlFor="chkBox">아이디저장</label>
             </span>
-            <button type="button">로그인</button>
+            <button type="button" onClick={test}>
+              로그인
+            </button>
             <p>
               * 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이
               있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.
