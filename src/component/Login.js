@@ -1,22 +1,22 @@
 import React from 'react';
 import '../assets/scss/Login.scss';
 import '../assets/scss/Style.scss';
+import './Header.js';
 import { Link } from 'react-router-dom';
 
 function Login() {
-  function test() {
+  function admin() {
     var id = document.querySelector('#id');
     var pwd = document.querySelector('#pwd');
 
     if (id.value === 'admin' || pwd.value === 123) {
-      window.location.href = '/';
+      // window.location.href = '/';
+      window.href = '/';
+      var element = document.getElementById('addminAdd');
+      element.classList.add('on');
     } else {
       alert('로그인을 할 수 없습니다.');
     }
-
-    // function back() {
-    //   history.go(-1);
-    // }
   }
   return (
     <div className="login_form">
@@ -47,7 +47,7 @@ function Login() {
               <input type="checkbox" id="chkBox"></input>
               <label htmlFor="chkBox">아이디저장</label>
             </span>
-            <button type="button" onClick={test}>
+            <button type="button" onClick={admin}>
               로그인
             </button>
             <p>

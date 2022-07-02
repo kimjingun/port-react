@@ -1,10 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import '../assets/scss/Header.scss';
+import './Login.js';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
   const navigate = useNavigate();
+
+  // function adminOut() {
+  //   var id = document.querySelector('#id');
+  //   var pwd = document.querySelector('#pwd');
+
+  //   if (id.value === 'admin' || pwd.value === 123) {
+  //     window.location.href = '/';
+  //   } else {
+  //     alert('로그인을 할 수 없습니다.');
+  //   }
+  // }
 
   return (
     <>
@@ -15,7 +27,10 @@ function Header() {
           </Link>
           <nav className="nav">
             <ul className="sub_nav">
-              <li>
+              <li className="SignOut">
+                <Link to="/">Sign Out</Link>
+              </li>
+              <li id="addminAdd">
                 <Link to="/component">Sign In</Link>
               </li>
               <li>
