@@ -8,12 +8,11 @@ function Login() {
   function admin() {
     var id = document.querySelector('#id');
     var pwd = document.querySelector('#pwd');
-
     if (id.value === 'admin' || pwd.value === 123) {
-      // window.location.href = '/';
-      window.href = '/';
-      var element = document.getElementById('addminAdd');
-      element.classList.add('on');
+      window.location.href = '/';
+      // window.href = '/';
+      // var element = document.getElementById('addminAdd');
+      // element.classList.add('on');
     } else {
       alert('로그인을 할 수 없습니다.');
     }
@@ -33,7 +32,7 @@ function Login() {
               id="id"
               className="mb10"
               placeholder="아이디를 입력해 주세요."
-              autocomplete="off"
+              // autocomplete="off"
             ></input>
             <label htmlFor="pwd"></label>
             <input
@@ -41,13 +40,24 @@ function Login() {
               id="pwd"
               className="mb10"
               placeholder="비밀번호를 입력해 주세요."
-              autocomplete="off"
+              // autocomplete="off"
             ></input>
             <span className="chkBox">
               <input type="checkbox" id="chkBox"></input>
               <label htmlFor="chkBox">아이디저장</label>
             </span>
-            <button type="button" onClick={admin}>
+            {/* <button type="button" onClick={admin}>
+              로그인
+            </button> */}
+            <button
+              type="button"
+              // onClick={() => {
+              //   this.props.history.push({
+              //     pathname: '/',
+              //     state: { userCell: userCell },
+              //   });
+              // }}
+            >
               로그인
             </button>
             <p>
