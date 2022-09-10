@@ -31,7 +31,7 @@ function Header() {
                 <Link to="/">Sign Out</Link>
               </li>
               <li id="addminAdd">
-                <Link to="/component">Sign In</Link>
+                <Link to="/component/Login">Sign In</Link>
               </li>
               <li>
                 <Link to="/">My Starbucks</Link>

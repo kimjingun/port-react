@@ -31,31 +31,31 @@
 
 // input checkbox
 input[type="checkbox"] { 
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    appearance: none; 
-    background: #fff; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    width: 26px; 
-    height: 26px; 
-    outline: 0; 
-    background: url(../Images/ico/mem_check_off.png) no-repeat;
-    background-size: 26px;
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+  background: #fff; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  width: 26px; 
+  height: 26px; 
+  outline: 0; 
+  background: url(../Images/ico/mem_check_off.png) no-repeat;
+  background-size: 26px;
 } 
 input[type="checkbox"] + label {
-    cursor: pointer;
+  cursor: pointer;
 }
 input[type="checkbox"]::after { 
-    border: solid #fff; 
-    border-width: 0 2px 2px 0; 
-    content: ''; 
-    display: none; 
-    width: 26px; 
-    height: 26px; 
-    background: url(../Images/ico/mem_check_on.png) no-repeat;
-    background-size: 26px;
+  border: solid #fff; 
+  border-width: 0 2px 2px 0; 
+  content: ''; 
+  display: none; 
+  width: 26px; 
+  height: 26px; 
+  background: url(../Images/ico/mem_check_on.png) no-repeat;
+  background-size: 26px;
 } 
 input[type="checkbox"]:checked::after { 
-    display: block; 
+  display: block; 
 }

@@ -3,18 +3,39 @@ import '../assets/scss/Login.scss';
 import '../assets/scss/Style.scss';
 import './Header.js';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+// function HomeButton() {
+//   const navigate = useNavigate();
+//   navigate('/home');
+// }
 
 function Login() {
-  function admin() {
-    var id = document.querySelector('#id');
-    var pwd = document.querySelector('#pwd');
-    if (id.value === 'admin' || pwd.value === 123) {
-      window.location.href = '/';
-      // window.href = '/';
-      // var element = document.getElementById('addminAdd');
-      // element.classList.add('on');
+  const navigate = useNavigate();
+  function Admin() {
+    const id = document.getElementById('id');
+    const pwd = document.getElementById('pwd');
+    const login = document.getElementById('login');
+    let errStack = 0;
+    // if (id.value === 'admin' && pwd.value === 123) {
+    //   navigate('/');
+    // } else {
+    //   alert('로그인을 할 수 없습니다.');
+    // }
+    if (id.value == 'admin') {
+      if (pwd.value == '000') {
+        alert('로그인 되었습니다!');
+        navigate('/');
+      } else {
+        alert('아이디와 비밀번호를 다시 한 번 확인해주세요!');
+        errStack++;
+      }
     } else {
-      alert('로그인을 할 수 없습니다.');
+      alert('존재하지 않는 계정입니다.');
+    }
+
+    if (errStack >= 5) {
+      alert('비밀번호를 5회 이상 틀리셨습니다. 비밀번호 찾기를 권장드립니다.');
     }
   }
   return (
@@ -32,7 +53,6 @@ function Login() {
               id="id"
               className="mb10"
               placeholder="아이디를 입력해 주세요."
-              // autocomplete="off"
             ></input>
             <label htmlFor="pwd"></label>
             <input
@@ -40,24 +60,12 @@ function Login() {
               id="pwd"
               className="mb10"
               placeholder="비밀번호를 입력해 주세요."
-              // autocomplete="off"
             ></input>
             <span className="chkBox">
               <input type="checkbox" id="chkBox"></input>
               <label htmlFor="chkBox">아이디저장</label>
             </span>
-            {/* <button type="button" onClick={admin}>
-              로그인
-            </button> */}
-            <button
-              type="button"
-              // onClick={() => {
-              //   this.props.history.push({
-              //     pathname: '/',
-              //     state: { userCell: userCell },
-              //   });
-              // }}
-            >
+            <button type="button" id="login" onClick={Admin}>
               로그인
             </button>
             <p>

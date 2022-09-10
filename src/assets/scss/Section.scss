@@ -133,9 +133,9 @@ body {
         .slider {
           position: absolute;
           top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-          width: 50%;
+          right: 50%;
+          transform: translate(110%, -50%);
+          width: 10%;
           text-align: left;
           .item {
             > a {

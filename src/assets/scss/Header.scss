@@ -35,13 +35,27 @@
         justify-content: flex-end;
         padding-bottom: 20px;
         > li {
-          width: 120px;
-          &:nth-child(4){
-            width: 180px;
+          position: relative;
+          width: auto;
+          padding-right: 10px;
+          margin-right: 10px;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            right: 0;
+            width: 1px;
+            height: 10px;
+            background: #e5e5e5;
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
           }
           > a {
             display: block;
-            font-size: 12px;
+            font-size: 13px;
             color: #555;
           }
         }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-
 import Section from './component/Section';
+import './App.css';
 
-function App() {
-  return <Section />;
+class App extends Component {
+  render() {
+    return <Section />;
+  }
 }
 
 export default App;

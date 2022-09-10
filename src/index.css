@@ -1,14 +1,1 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-body {
-  margin: 0;
-  /* font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica; */
-  font-family: 'Noto Sans KR', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  /* font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica; */
-  font-family: 'Noto Sans KR', sans-serif;
-}
