@@ -5,23 +5,22 @@ import './Header.js';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-// function HomeButton() {
-//   const navigate = useNavigate();
-//   navigate('/home');
-// }
-
 function Login() {
   const navigate = useNavigate();
+
+  function keyCode(e) {
+    if (e.keyCode == 13) {
+      console.log('A');
+      Admin();
+    }
+  }
+
   function Admin() {
     const id = document.getElementById('id');
     const pwd = document.getElementById('pwd');
     const login = document.getElementById('login');
     let errStack = 0;
-    // if (id.value === 'admin' && pwd.value === 123) {
-    //   navigate('/');
-    // } else {
-    //   alert('로그인을 할 수 없습니다.');
-    // }
+
     if (id.value == 'admin') {
       if (pwd.value == '000') {
         alert('로그인 되었습니다!');
@@ -33,11 +32,11 @@ function Login() {
     } else {
       alert('존재하지 않는 계정입니다.');
     }
-
     if (errStack >= 5) {
       alert('비밀번호를 5회 이상 틀리셨습니다. 비밀번호 찾기를 권장드립니다.');
     }
   }
+
   return (
     <div className="login_form">
       <div className="container">
@@ -56,7 +55,7 @@ function Login() {
             ></input>
             <label htmlFor="pwd"></label>
             <input
-              type="text"
+              type="password"
               id="pwd"
               className="mb10"
               placeholder="비밀번호를 입력해 주세요."
@@ -65,7 +64,7 @@ function Login() {
               <input type="checkbox" id="chkBox"></input>
               <label htmlFor="chkBox">아이디저장</label>
             </span>
-            <button type="button" id="login" onClick={Admin}>
+            <button type="button" id="login" onClick={keyCode}>
               로그인
             </button>
             <p>

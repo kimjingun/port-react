@@ -42,6 +42,11 @@ function Header() {
               <li>
                 <Link to="/">Find a Store</Link>
               </li>
+              <li className="search">
+                <Link to="/">
+                  <img src={require('../assets/Images/ico/ico_search.png')} />
+                </Link>
+              </li>
             </ul>
             <ul>
               <li>
