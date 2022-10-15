@@ -8,21 +8,14 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const navigate = useNavigate();
 
-  function keyCode(e) {
-    if (e.keyCode == 13) {
-      console.log('A');
-      Admin();
-    }
-  }
-
-  function Admin() {
+  function Admin(event) {
     const id = document.getElementById('id');
     const pwd = document.getElementById('pwd');
     const login = document.getElementById('login');
     let errStack = 0;
 
     if (id.value == 'admin') {
-      if (pwd.value == '000') {
+      if (pwd.value == '1') {
         alert('로그인 되었습니다!');
         navigate('/');
       } else {
@@ -34,6 +27,11 @@ function Login() {
     }
     if (errStack >= 5) {
       alert('비밀번호를 5회 이상 틀리셨습니다. 비밀번호 찾기를 권장드립니다.');
+    }
+
+    function keyevent() {
+      var keycode = event.keycode;
+      alert(keycode);
     }
   }
 
@@ -64,7 +62,12 @@ function Login() {
               <input type="checkbox" id="chkBox"></input>
               <label htmlFor="chkBox">아이디저장</label>
             </span>
-            <button type="button" id="login" onClick={keyCode}>
+            <button
+              type="button"
+              id="login"
+              onKeyPress={'keyevent(this);'}
+              onClick={Admin}
+            >
               로그인
             </button>
             <p>

@@ -169,7 +169,7 @@ function Section() {
                   <Link to="/" className="join">
                     회원가입
                   </Link>
-                  <Link to="/component" className="login">
+                  <Link to="/component/Login" className="login">
                     로그인
                   </Link>
                 </div>
